@@ -274,6 +274,7 @@ D:''',
                 print(f"[ERROR]\nApplicant {ctx.message.author.name} caused\n[EXCEPTION] - {e}")
 
         @bot.command()
+        @commands.has_any_role("Non-Verified")
         async def apply(ctx, first: str=None, last: str=None, year: str=None, accept: str=None):
             try:
                 # Make the characters lowercase
